@@ -234,7 +234,7 @@ for ( let i = 0; i < characters.length; i++){
   for ( let j = 0; j < femaleCharacters.length; j++){
     if (femaleCharacters[j].name === characters[i]){
       characters.splice(i, 1)
-      i--
+      i-- // i-- because length of characters array decrease when we splice an element
     }
   }
 }
@@ -243,3 +243,6 @@ console.log(characters)
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+
+let rng = Math.floor( Math.random() * starWarsCharacters.length)
+console.log(starWarsCharacters[rng])
